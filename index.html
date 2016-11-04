@@ -1,0 +1,18 @@
+<html ng-app="myApp">
+<head></head>
+<body>
+<div class="container">
+<h1>Simple Binding</h1>
+Enter your name: <input type="text" name="nameField" ng-model="nameField">{{ nameField }}
+</div>
+<div class="container_list" ng-controller="DataController">
+<h1>Simple ng-repeat</h1>
+<input type="text" name="filterName" ng-model="filterName">
+<ul>
+	<li ng-repeat="employee in employees | orderBy: 'name' | filter:filterName">{{employee.name}} - {{employee.address}}</li>
+</ul>
+</div>
+</body>
+<script type="text/javascript" src="scripts/angular.min.js"></script>
+<script type="text/javascript" src="scripts/scripts.js"></script>
+</html>
