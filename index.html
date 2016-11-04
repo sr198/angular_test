@@ -1,9 +1,13 @@
 <html ng-app="myApp">
 <head></head>
 <body>
-<div class="container">
+<div class="container" ng-controller="HelloWorld">
 <h1>Simple Binding</h1>
-Enter your name: <input type="text" name="nameField" ng-model="nameField">{{ nameField }}
+<div>{{greeting}}</div>
+Enter your name: <input type="text" name="nameField" ng-model="nameField">
+<p ng-if="nameField">
+	Hello {{nameField}}
+</p>
 </div>
 <div class="container_list" ng-controller="DataController">
 <h1>Simple ng-repeat</h1>
