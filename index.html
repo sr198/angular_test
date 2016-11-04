@@ -15,6 +15,10 @@ Enter your name: <input type="text" name="nameField" ng-model="nameField">
 <ul>
 	<li ng-repeat="employee in employees | orderBy: 'name' | filter:filterName">{{employee.name}} - {{employee.address}}</li>
 </ul>
+<input type="text" name="nameField2" ng-model="nameField2">
+<p ng-if="nameField2">
+{{message(nameField2)}}
+</p>
 </div>
 </body>
 <script type="text/javascript" src="scripts/angular.min.js"></script>

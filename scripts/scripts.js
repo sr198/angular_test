@@ -32,4 +32,5 @@ app.controller('DataController', ['$scope', function($scope){
 			{name:'Yuvraj Thapar', address:'Pune, India'},
 			{name:'Gajendra Valiveti', address:'Chennai, India'}
 			];
+	$scope.message = function( name ) { return "Hey "+ name + ", how're you doing?"};
 	}]);
